@@ -1,0 +1,78 @@
+(add-to-list 'load-path "~/.emacs.d")    ; This may not be appeared if you have already added.
+(require 'auto-complete-config)
+(ac-config-default)
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
+
+;; Backspace fix
+(define-key key-translation-map [?\C-h] [?\C-?])
+
+;; CEDET
+;;(load-file "~/.emacs.d/cedet-1.1/common/cedet.el")
+;;(global-ede-mode 1)                      ; Enable the Project management system
+;;(semantic-load-enable-code-helpers)      ; Enable prototype help and smart completion 
+;;(global-srecode-minor-mode 1)            ; Enable template insertion menu
+
+;; ECB loading
+;;(add-to-list 'load-path "~/.emacs.d/ecb-2.40")
+;;(require 'ecb)
+;;(setq ecb-source-path (quote ("~/Development")))
+
+;; Markdown
+(autoload 'markdown-mode "markdown-mode.el" "Major mode for editing Markdown files" t)
+(setq auto-mode-alist (cons '("\\.md" . markdown-mode) auto-mode-alist))
+
+;; Jade
+(add-to-list 'load-path "~/.emacs.d/jade-mode")
+(require 'sws-mode)
+(require 'jade-mode)    
+(add-to-list 'auto-mode-alist '("\\.styl$" . sws-mode))
+(add-to-list 'auto-mode-alist '("\\.jade$" . jade-mode))
+
+;; disable splash screen
+(setq inhibit-splash-screen t)
+
+;; window next/previous
+(defun select-next-window ()
+  "Switch to the next window" 
+  (interactive)
+  (select-window (next-window)))
+
+(defun select-previous-window ()
+  "Switch to the previous window" 
+  (interactive)
+  (select-window (previous-window)))
+
+;; Indent setup
+(setq-default js-indent-level 2)
+(setq-default indent-tabs-mode nil)
+
+;; require color-theme
+(require 'color-theme)
+(color-theme-initialize)
+(color-theme-dark-laptop)
+
+;; create a backup file directory
+(setq
+   backup-by-copying t      ; don't clobber symlinks
+   backup-directory-alist
+    '(("." . "~/.emacs_backups"))    ; don't litter my fs tree
+   delete-old-versions t
+   kept-new-versions 6
+   kept-old-versions 2
+   version-control t)       ; use versioned backups
+
+(custom-set-variables
+  ;; custom-set-variables was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ '(ecb-layout-window-sizes (quote (("left8" (0.19784172661870503 . 0.28378378378378377) (0.19784172661870503 . 0.22972972972972974) (0.19784172661870503 . 0.2972972972972973) (0.19784172661870503 . 0.16216216216216217)) ("left3" (0.18345323741007194 . 0.28378378378378377) (0.18345323741007194 . 0.33783783783783783) (0.18345323741007194 . 0.35135135135135137)))))
+ '(ecb-options-version "2.40")
+ '(show-paren-mode t)
+ '(tool-bar-mode nil))
+(custom-set-faces
+  ;; custom-set-faces was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ )

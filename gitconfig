@@ -1,0 +1,13 @@
+[color]
+	ui = auto
+[user]
+	name = Art Jacobson
+	email = art.jacobson@savantsystems.com
+[core]
+	excludesfile = /Users/Art.Jacobson/.gitignore_global
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+[rerere]
+	enabled = true
+[push]
+	default = tracking
