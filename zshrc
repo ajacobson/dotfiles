@@ -251,6 +251,7 @@ alias doublePenetration="cvs -q update -dP"
 alias dunnet="emacs -batch -l dunnet"
 alias screen="screen -DRR"
 alias x3open="open -b com.apple.Xcode"
+alias gs="git status"
 
 # This function sets the window tile to user@host:/workingdir before each
 # prompt. If you're using screen, it sets the window title (works
