@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 # BEGIN LOCAL
 PATH="/usr/local/bin:/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:/usr/local/wine/bin:$PATH"
 export CVSROOT=:pserver:ajacobson@spacely:/Volumes/SpacelyRAID/cvsroot
