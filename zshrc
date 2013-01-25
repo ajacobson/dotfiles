@@ -7,6 +7,12 @@ export EDITOR=emacs
 export LSCOLORS=gxfxcxdxbxegedabagacad
 export LESS="-F -X -R"
 
+OSX=0;
+
+if [ -e "/usr/bin/sw_vers" ]; then
+    OSX=1;
+fi
+
 # Things from dev.gentoo.org/~ciaranm/configs/bashrc -- thanks Ciaran!
 if [[ "${TERM}" == "rxvt-unicode" ]] ; then
     export TERMTYPE="256"
@@ -243,7 +249,12 @@ if [ -f /opt/local/etc/profile.d/autojump.sh ]; then
 fi
 
 # Aliases
-alias ls="ls -G"
+if [ $OSX -eq 1 ]; then
+    alias ls="ls -G"
+else
+    alias ls="ls --color=auto";
+fi
+
 alias cvs="colorcvs"
 alias svn="colorsvn"
 alias fucking="sudo"
