@@ -5,6 +5,7 @@
 	email = art.jacobson@savantsystems.com
 [core]
 	excludesfile = /Users/Art.Jacobson/.gitignore_global
+	trustctime = false
 [alias]
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
         ksdiff = difftool -y -t Kaleidoscope
