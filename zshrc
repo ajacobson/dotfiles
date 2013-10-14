@@ -255,8 +255,8 @@ else
     alias ls="ls --color=auto";
 fi
 
-alias cvs="colorcvs"
-alias svn="colorsvn"
+#alias cvs="colorcvs"
+#alias svn="colorsvn"
 alias fucking="sudo"
 alias doublePenetration="cvs -q update -dP"
 alias dunnet="emacs -batch -l dunnet"
