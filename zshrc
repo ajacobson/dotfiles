@@ -13,6 +13,11 @@ if [ -e "/usr/bin/sw_vers" ]; then
     OSX=1;
 fi
 
+# OSX specific path
+if [ $OSX -eq 1 ]; then
+    PATH="/Applications/Android/SDK/tools:$PATH"
+fi
+
 # Things from dev.gentoo.org/~ciaranm/configs/bashrc -- thanks Ciaran!
 if [[ "${TERM}" == "rxvt-unicode" ]] ; then
     export TERMTYPE="256"
