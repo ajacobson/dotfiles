@@ -181,6 +181,8 @@ function prompt_char {
 RPROMPT=$'$(rprompt)'
 if [ "$USER" = 'root' ]; then
     PROMPT='%{$fg_bold[red]%}%n%{$fg_bold[white]%} $(prompt_char) %{$reset_color%}% '
+elif [ -n "$SSH_CLIENT" ]; then
+    PROMPT='%{$fg_bold[blue]%}%n@%m%{$fg_bold[white]%} $(prompt_char) %{$reset_color%}% '
 else
     PROMPT='%{$fg_bold[green]%}%n@%m%{$fg_bold[white]%} $(prompt_char) %{$reset_color%}% '
 fi
