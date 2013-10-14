@@ -1,2 +1,4 @@
+.DS_Store
 zsh/cache
+emacs.d/auto-save-list
 emacs.d/ac-comphist.dat
