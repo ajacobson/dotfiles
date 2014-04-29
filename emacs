@@ -12,6 +12,12 @@
 (add-to-list 'load-path "~/.emacs.d/vendor/coffee-mode")
 (require 'coffee-mode)
 
+;; CocoaPods podfile
+;;(add-auto-mode 'ruby-mode
+;;           "Podfile\\'" "\\.podspec\\'")
+(add-to-list 'auto-mode-alist '("Podfile\\'" . ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.podspec\\'" . ruby-mode))
+
 ;; Markdown
 (autoload 'markdown-mode "markdown-mode.el" "Major mode for editing Markdown files" t)
 (setq auto-mode-alist (cons '("\\.md" . markdown-mode) auto-mode-alist))
