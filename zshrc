@@ -15,7 +15,7 @@ fi
 
 # OSX specific path
 if [ $OSX -eq 1 ]; then
-    PATH="/Applications/Android/SDK/tools:$PATH"
+    PATH="/Applications/Android/SDK/tools:/Applications/Android/SDK/platform-tools:$PATH"
 fi
 
 # Things from dev.gentoo.org/~ciaranm/configs/bashrc -- thanks Ciaran!
