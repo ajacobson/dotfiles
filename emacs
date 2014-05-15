@@ -1,4 +1,4 @@
-(add-to-list 'load-path "~/.emacs.d")    ; This may not be appeared if you have already added.
+(add-to-list 'load-path "~/.emacs.d")
 (require 'auto-complete-config)
 (ac-config-default)
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
@@ -13,8 +13,6 @@
 (require 'coffee-mode)
 
 ;; CocoaPods podfile
-;;(add-auto-mode 'ruby-mode
-;;           "Podfile\\'" "\\.podspec\\'")
 (add-to-list 'auto-mode-alist '("Podfile\\'" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.podspec\\'" . ruby-mode))
 
