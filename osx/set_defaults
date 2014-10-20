@@ -1,0 +1,56 @@
+#!/usr/bin/env sh
+
+#Use current directory as default search scope in Finder
+defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
+
+#Show Path bar in Finder
+defaults write com.apple.finder ShowPathbar -bool true
+
+#Show Status bar in Finder
+defaults write com.apple.finder ShowStatusBar -bool true
+
+#Don't warn on empty trash
+defaults write com.apple.finder WarnOnEmptyTrash -bool false
+
+#Show external hard drives on desktop
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
+defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true
+defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
+defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
+
+#Disable file extension change warning
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+
+#Sets Dock icon size
+defaults write com.apple.dock tilesize -int 64
+
+#Show indicator lights for open applications in the Dock
+defaults write com.apple.dock show-process-indicators -bool true
+
+#Enable AirDrop over Ethernet and on unsupported Macs running Lion
+defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
+
+#Show the ~/Library folder
+chflags nohidden ~/Library
+
+#Disable fancy quotes and dashes
+defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+
+#Disable .DS_STORE on network volumes
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
+#Set Terminal.app to use Pro theme by default
+defaults write com.apple.Terminal "Default Window Settings" -string "Pro"
+defaults write com.apple.Terminal "Startup Window Settings" -string "Pro"
+
+#Set screenshot format
+defaults write com.apple.screencapture type -string "png"
+
+# Prevent Time Machine from prompting to use new hard drives as backup volume
+defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
+
+for app in "Activity Monitor" "Calendar" "cfprefsd" \
+    "Dock" "Finder" "SystemUIServer" "Terminal"; do
+    killall "${app}" > /dev/null 2>&1
+done

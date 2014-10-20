@@ -1,6 +1,6 @@
-[submodule "emacs.d/vendor/jade-mode"]
-	path = emacs.d/vendor/jade-mode
+[submodule "jade-mode"]
+	path = etc/emacs.d/vendor/jade-mode
 	url = git@github.com:brianc/jade-mode.git
-[submodule "emacs.d/vendor/coffee-mode"]
-	path = emacs.d/vendor/coffee-mode
+[submodule "coffee-mode"]
+	path = etc/emacs.d/vendor/coffee-mode
 	url = git@github.com:defunkt/coffee-mode.git
