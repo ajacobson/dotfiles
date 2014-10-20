@@ -1,0 +1,45 @@
+#!/usr/bin/env sh
+
+# Installs some usefull things using Homebrew
+
+echo "Installing cask..."
+
+brew install caskroom/cask/brew-cask
+
+echo "Installing brews..."
+
+brew cask install android-file-transfer
+brew cask install android-studio
+brew cask install github
+brew cask install alfred
+brew cask install virtualbox
+brew cask install vagrant
+brew cask install tunnelblick
+brew cask install totalterminal
+brew cask install base
+brew cask install the-unarchiver
+brew cask install kaleidoscope
+
+brew cask install google-chrome
+brew cask install google-drive
+brew cask install google-hangouts
+
+brew cask install hipchat
+
+brew cask install calibre
+brew cask install adobe-creative-cloud
+
+brew cask install flux
+brew cask install istat-menus
+brew cask install bartender
+
+brew cask install steam
+brew cask install send-to-kindle
+brew cask install plex-home-theater
+brew cask install transmission
+
+brew cask alfred link
+
+echo "Cleaning up brews..."
+
+brew cleanup

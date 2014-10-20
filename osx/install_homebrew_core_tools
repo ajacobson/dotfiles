@@ -1,0 +1,26 @@
+#!/usr/bin/env sh
+
+# Installs some usefull things using Homebrew
+
+echo "Updating brews..."
+
+brew update
+brew upgrade
+
+echo "Installing brews..."
+
+brew install git
+brew install git-annex
+brew install gti
+
+brew install emacs
+brew install the_silver_searcher
+brew install wget
+
+brew install coreutils
+brew install binutils
+brew install zsh
+
+echo "Cleaning up brews..."
+
+brew cleanup

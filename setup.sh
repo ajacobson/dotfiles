@@ -2,15 +2,33 @@
 
 DIR="$( cd "$( dirname "$0" )" && pwd )";
 
-ln -sf "$DIR/etc/zshrc" "$HOME/.zshrc"
-ln -sfh "$DIR/etc/zsh" "$HOME/.zsh"
-ln -sf "$DIR/etc/screenrc" "$HOME/.screenrc"
-ln -sf "$DIR/etc/gitconfig" "$HOME/.gitconfig"
-ln -sf "$DIR/etc/gitignore_global" "$HOME/.gitignore_global"
-ln -sf "$DIR/etc/agignore" "$HOME/.agignore"
-ln -sf "$DIR/etc/emacs" "$HOME/.emacs"
-ln -sfh "$DIR/etc/emacs.d" "$HOME/.emacs.d"
+read -p "Symlink dotfiles? (y/n) " -n 1
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+    ./link_dotfiles
+    echo "Done!\n"
+fi
 
 if [ -e "/usr/bin/sw_vers" ]; then
-    exec osx/set_defaults
+    read -p "Configure OSX defaults? (y/n) " -n 1
+    echo
+    if [[ $REPLY =~ ^[Yy]$ ]]; then
+        ./osx/set_defaults
+        echo "Done!\n"
+    fi
+
+    read -p "Install homebrew? (y/n) " -n 1
+    echo
+    if [[ $REPLY =~ ^[Yy]$ ]]; then
+        ./osx/install_homebrew
+        ./osx/install_homebrew_core_tools
+        echo "Done!\n"
+    fi
+
+    read -p "Install cocoapods? (y/n) " -n 1
+    echo
+    if [[ $REPLY =~ ^[Yy]$ ]]; then
+        ./osx/install_cocoapods
+        echo "Done!\n"
+    fi
 fi
