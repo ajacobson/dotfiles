@@ -2,7 +2,7 @@
 	ui = auto
 [user]
 	name = Art Jacobson
-	email = art.jacobson@savantsystems.com
+	email = art.jacobson@savant.com
 [core]
 	excludesfile = /Users/Art.Jacobson/.gitignore_global
 	trustctime = false
