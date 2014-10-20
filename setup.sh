@@ -14,6 +14,7 @@ if [ -e "/usr/bin/sw_vers" ]; then
     echo
     if [[ $REPLY =~ ^[Yy]$ ]]; then
         ./osx/set_defaults
+        ./osx/fix-macosx.py
         echo "Done!\n"
     fi
 
