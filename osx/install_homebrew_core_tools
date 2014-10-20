@@ -16,6 +16,7 @@ brew install gti
 brew install emacs
 brew install the_silver_searcher
 brew install wget
+brew install mosh
 
 brew install coreutils
 brew install binutils
