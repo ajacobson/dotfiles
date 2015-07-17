@@ -4,6 +4,10 @@
 (ac-config-default)
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
 
+;; Go lang
+(add-to-list 'load-path "~/.emacs.d/vendor/go-mode")
+(require 'go-mode-autoloads)
+
 ;; Backspace fix
 (define-key key-translation-map [?\C-h] [?\C-?])
 

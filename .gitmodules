@@ -4,3 +4,6 @@
 [submodule "coffee-mode"]
 	path = etc/emacs.d/vendor/coffee-mode
 	url = git@github.com:defunkt/coffee-mode.git
+[submodule "go-mode"]
+	path = etc/emacs.d/vendor/go-mode
+	url = git@github.com:dominikh/go-mode.el.git
