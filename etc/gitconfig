@@ -3,6 +3,7 @@
 [user]
 	name = Art Jacobson
 	email = art.jacobson@savant.com
+	signingkey = CCD1D18B
 [core]
 	excludesfile = /Users/Art.Jacobson/.gitignore_global
 	trustctime = false
@@ -33,3 +34,5 @@
 	clean = git lfs clean %f
 	smudge = git lfs smudge %f
 	required = true
+[commit]
+	gpgsign = true
